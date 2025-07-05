@@ -14,8 +14,7 @@ pipeline {
             steps {
                 checkout([$class: 'gitSCM' branches: [[name: '*/master']], userRemoteConfigs: [[ url: 'https://github.com/mayur968574/node-hello.git' credentialId: 'git']]
                                                                                                ])
-                git 'https://github.com/mayur968574/node-hello.git'
-                
+              
             }
             
         }
