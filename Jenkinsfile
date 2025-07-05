@@ -13,7 +13,7 @@ pipeline {
             
             steps {
 
-                git credentialsId: 'git', url: 'https://github.com/mayur968574/node-hello.git', branch: 'master'                                                                                               ])
+                git credentialsId: 'git', url: 'https://github.com/mayur968574/node-hello.git', branch: 'master'   
               
             }
             
