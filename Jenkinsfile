@@ -13,7 +13,7 @@ pipeline {
             
             steps {
                 
-               sh "git clone 'https://github.com/mayur968574/node-hello.git'"
+                git 'https://github.com/mayur968574/node-hello.git'
                 
             }
             
