@@ -60,7 +60,7 @@ pipeline {
             
             sh ''' 
                 echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                docker push $DOCKER_IMAGE: $TAG
+                docker push $DOCKER_IMAGE:$TAG
                 
                 '''    
                             }
@@ -68,11 +68,10 @@ pipeline {
         stage ('Deploy') {
             
             steps {
-                
-                                   
+                                                   
                     sh '''                        
                         docker pull $DOCKER_IMAGE': $TAG && 
-                        docker run -d --name node_app -p 80:3000 $DOCKER_IMAGE: $TAG
+                        docker run -d --name node_app -p 3000:3000 $DOCKER_IMAGE:1.0
                         
                         '''
                     
