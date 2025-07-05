@@ -72,10 +72,8 @@ pipeline {
                                    
                     sh '''                        
                         docker pull $DOCKER_IMAGE': $TAG && 
-                        docker stop node_app || true &&
-                        docker rm node_app || true &&
                         docker run -d --name node_app -p 80:3000 $DOCKER_IMAGE: $TAG
-                            '
+                        
                         '''
                     
                             
