@@ -69,8 +69,7 @@ pipeline {
             
             steps {
                 
-                sshagent(['ssh-key-id']) {
-                    
+                                   
                     sh '''
                         ssh mayur@15.206.169.34 '
                         docker pull $DOCKER_IMAGE': $TAG && 
@@ -80,8 +79,7 @@ pipeline {
                             '
                         '''
                     
-                } 
-                
+                            
             }
             
             
