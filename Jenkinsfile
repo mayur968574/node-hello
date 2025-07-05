@@ -70,8 +70,7 @@ pipeline {
             steps {
                 
                                    
-                    sh '''
-                        ssh mayur@15.206.169.34 '
+                    sh '''                        
                         docker pull $DOCKER_IMAGE': $TAG && 
                         docker stop node_app || true &&
                         docker rm node_app || true &&
