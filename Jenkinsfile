@@ -13,7 +13,7 @@ pipeline {
             
             steps {
 
-                git credentialsId: 'git-creds', url: 'https://github.com/mayur968574/node-hello.git', branch: 'master'   
+                sh "git clone https://github.com/mayur968574/node-hello.git"
               
             }
             
